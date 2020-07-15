@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_settings_app/model/settingsExemple.dart';
+import 'package:flutter_settings_app/playStoreSettingsPage.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -107,7 +108,11 @@ class _HomePageState extends State<HomePage> {
                                 settingsExampleList.settingsExample.length,
                             itemBuilder: (context, index) {
                               return InkWell(
-                                onTap: () {},
+                                onTap: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) =>
+                                          PlayStoreSettingsPage()));
+                                },
                                 child: Container(
                                   width: width,
                                   margin: EdgeInsets.all(5.0),
@@ -140,7 +145,8 @@ class _HomePageState extends State<HomePage> {
                                           margin: EdgeInsets.only(
                                               top: 10.0, bottom: 10, left: 5.0),
                                           child: Image.asset(
-                                            "assets/images/img1.png",
+                                            settingsExampleList
+                                                .settingsExample[index].image,
                                             fit: BoxFit.cover,
                                           ),
                                         ),

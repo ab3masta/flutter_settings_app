@@ -2,9 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 SettingsExampleList settingsExampleList = SettingsExampleList(settingsExample: [
-  SettingsExample(name: "Classic Leather", image: "assets/images/Item_1.png",nbrOption: 10),
-  SettingsExample(name: "Classic Leather", image: "assets/images/Item_1.png",nbrOption: 10),
-  SettingsExample(name: "Classic Leather", image: "assets/images/Item_1.png",nbrOption: 10),
+  SettingsExample(name: "Play store", image: "assets/images/google-play.png",nbrOption: 10),
 ]);
 
 class SettingsExampleList {
