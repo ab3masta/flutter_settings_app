@@ -65,6 +65,48 @@ class _PlayStoreSettingsPageState extends State<PlayStoreSettingsPage> {
                     title: Text("Mise à jour automatique des d'applis"),
                     subtitle: Text(
                         "Ne pas mettre à jour automatiquement les applications"),
+                    onTap: () {
+                      showDialog<String>(
+                          context: context,
+                          builder: (BuildContext context) => AlertDialog(
+                                title: Text(
+                                    "Préférences relatives au téléchargement d'applis"),
+                                content: Container(
+                                  height: 100,
+                                  decoration:
+                                      BoxDecoration(color: Colors.green),
+                                  child: Column(
+                                    children: <Widget>[
+                                      Row(
+                                        children: <Widget>[
+                                          Radio(
+                                              value: true,
+                                              groupValue: null,
+                                              onChanged: null),
+                                          Container(
+                                            height: 70.0,
+                                            child: 
+                                            Column(
+                                              children: <Widget>[
+                                                Text("data"),
+                                                 Text("data"),
+                                              ],
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                actions: <Widget>[
+                                  FlatButton(
+                                      onPressed: () {
+                                        Navigator.of(context).pop();
+                                      },
+                                      child: Text("OK"))
+                                ],
+                              ));
+                    },
                   ),
                   ListTile(
                     title: Text("Lire automatiquement les vidéos"),
@@ -95,6 +137,7 @@ class _PlayStoreSettingsPageState extends State<PlayStoreSettingsPage> {
                     title: Text("Préférences Google Play"),
                     subtitle: Text(
                         "Supprimer l'historique de votre liste de souhaits,du porgramme Beta et d'autres listes"),
+                    onTap: () {},
                   ),
                   SizedBox(
                     height: 5.0,
